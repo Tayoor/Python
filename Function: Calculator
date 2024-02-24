@@ -1,0 +1,24 @@
+"""
+Write a Python function called calculator that takes three arguments: two numbers and an arithmetic operation ('+', '-', '*', '/'). The function should perform the specified arithmetic operation on the two numbers and return the result.
+"""
+def calculator(a,b,c):
+    a = float(a)
+    b = float(b)
+    if c == '*':
+        return a * b
+    elif c == '+':
+        return a + b
+    elif c == '-':
+        return a - b
+    elif c == '/':
+        if b != 0:
+            return a / b
+        else:
+            return 'Cannot divide by zero'
+    else:
+        return 'invalid case'
+a = input('Give first numeric value: ')
+b = input('Give second numeric value: ')
+c = input('Give symbol of calculation: ')
+calculation1 = calculator(a, b, c)
+print(calculation1)
