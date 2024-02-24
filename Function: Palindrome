@@ -1,0 +1,17 @@
+"""
+Write a function called is_palindrome that takes a string as input and returns True if the string is a palindrome (reads the same forwards and backwards), and False otherwise.
+"""
+def is_palindrome(x):
+    reversed_x = ''
+    x_length = len(x)
+    
+    for i in range(x_length):
+        reversed_x += x[x_length - i - 1]
+    
+    if x == reversed_x:
+        print(x + " is palindrome")
+    else:
+        print(x + " is not palindrome")
+        
+aq = input('Give some text: ')
+is_palindrome(aq)
